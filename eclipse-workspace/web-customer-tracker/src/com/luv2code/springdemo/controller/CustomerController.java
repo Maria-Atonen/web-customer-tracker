@@ -46,6 +46,7 @@ public class CustomerController {
 	public String saveCustomer(
 			@Valid @ModelAttribute("customer") Customer theCustomer,
 			BindingResult theBindingResult) {
+		
 		if(theBindingResult.hasErrors()) {
 			return "customer-form";
 		}else {

@@ -30,7 +30,7 @@ public class Customer {
 	private String lastName;
 	
 	@Column(name="email")
-	@Pattern(regexp="\\\\b[A-Z0-9._%-]+@[A-Z0-9.-]+\\\\.[A-Z]{2,4}\\\\b", message="wrong email format")
+	@Pattern(regexp="\\b[\\w.%-]+@[-.\\w]+\\.[A-Za-z]{2,4}\\b", message="wrong email format")
 	private String email;
 	
 	public Customer () {
